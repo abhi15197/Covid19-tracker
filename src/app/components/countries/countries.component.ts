@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 })
 export class CountriesComponent implements OnInit {
 
-  data : GlobalDataSummary[];
+  data : any;
   countries : string[] = [];
   totalConfirmed = 0;
   totalActive = 0;
@@ -23,7 +23,8 @@ export class CountriesComponent implements OnInit {
   loading = true;
   dataTable=[];
   chart = {
-    LineChart : "LineChart", 
+    LineChart : "LineChart",
+     
     height: 500, 
     options: {
       animation:{
@@ -53,7 +54,7 @@ export class CountriesComponent implements OnInit {
     ).subscribe(
       {
         complete : ()=>{
-         this.updateValues('India')
+         this.updateValues('Afghanistan')
          this.loading = false;
         }
       }

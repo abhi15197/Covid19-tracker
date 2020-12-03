@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
                 this.totalActive += cs.active
                 this.totalConfirmed += cs.confirmed
                 this.totalDeaths += cs.deaths
-                this.totalRecovered += cs.active
+                this.totalRecovered += cs.recovered
               }
 
             })
